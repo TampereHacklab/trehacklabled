@@ -1,0 +1,12 @@
+ [Unit]
+ Description=User ledmatrix autoupdater script
+ After=multi-user.target
+
+ [Service]
+ User=trehacklab
+ Group=trehacklab
+ Type=simple
+ ExecStart=/home/trehacklab/autoupdate.sh
+
+ [Install]
+ WantedBy=multi-user.target
