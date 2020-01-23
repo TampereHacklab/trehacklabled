@@ -1,5 +1,5 @@
 # polls github and if there are changes available pulls them and restarts the service
-# 
+#
 
 while true
 do
@@ -7,7 +7,7 @@ do
 	git fetch
 	LOCAL=$(git rev-parse HEAD);
 	REMOTE=$(git rev-parse @{u});
-	
+
 	if [ $LOCAL != $REMOTE ]; then
 		git pull origin master
 		sudo systemctl stop ledmatrix.service
