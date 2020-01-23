@@ -1,3 +1,5 @@
+#! /bin/bash
+
 # polls github and if there are changes available pulls them and restarts the service
 #
 
