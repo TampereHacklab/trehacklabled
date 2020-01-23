@@ -8,4 +8,4 @@
 #Start: sudo systemctl start ledmatrix.service
 
 #NOT FULLY IMPLEMENTED YET!
-/usr/bin/python3 /home/trehacklab/led.py
+/usr/bin/python3 /home/trehacklab/git/trehacklabled/led.py
