@@ -7,10 +7,11 @@ https://tampere.hacklab.fi/led-matriisin%c3%a4ytt%c3%b6/
 # setup for now (raspi zerow)
 
 ```
+export USER=trehacklab
 cd ~
 
 # our user needs access to serial
-sudo usermod -a -G dialout trehacklab
+sudo usermod -a -G dialout $USER
 
 # activate serial (raspi-config, interfacing options, no login, enable serial hardware). requires reboot
 
@@ -30,12 +31,15 @@ python3 led.py
 cp autoupdate.sh startup.sh ~/
 
 mkdir -p ~/.config/systemd/user/
+# you might need to edit the service files. systemd unit files only allow absolute paths...
 cp ledmatrix.service ~/.config/systemd/user/
 cp autoupdate.service ~/.config/systemd/user/
 systemctl --user daemon-reload
 
 systemctl --user enable ledmatrix
 systemctl --user enable autoupdate
+
+loginctl enable-linger $USER
 
 sudo reboot
 ```
