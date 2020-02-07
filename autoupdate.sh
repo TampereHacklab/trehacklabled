@@ -12,9 +12,8 @@ do
 
 	if [ $LOCAL != $REMOTE ]; then
 	        git pull origin master
-                pipenv sync
-		sudo systemctl --user stop ledmatrix.service
-		sudo systemctl --user start ledmatrix.service
+		systemctl --user stop ledmatrix.service
+		systemctl --user start ledmatrix.service
 	fi
 sleep 900
 done
