@@ -1,12 +1,10 @@
- [Unit]
- Description=User ledmatrix script
- After=multi-user.target
+[Unit]
+Description=User ledmatrix script
+After=multi-user.target
 
- [Service]
- User=trehacklab
- Group=trehacklab
- Type=simple
- ExecStart=/home/trehacklab/startup.sh
+[Service]
+Type=simple
+ExecStart=~/startup.sh
 
- [Install]
- WantedBy=multi-user.target
+[Install]
+WantedBy=multi-user.target
