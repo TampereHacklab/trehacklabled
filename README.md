@@ -34,9 +34,10 @@ cp ledmatrix.service ~/.config/systemd/user/
 cp autoupdate.service ~/.config/systemd/user/
 systemctl --user daemon-reload
 
-systemctl --user start ledmatrix
-systemctl --user start autoupdate
+systemctl --user enable ledmatrix
+systemctl --user enable autoupdate
 
+reboot
 ```
 
 autoupdate will check for new code in the repo every 15 minutes and restart the services if required

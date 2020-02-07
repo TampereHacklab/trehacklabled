@@ -7,4 +7,4 @@ Type=simple
 ExecStart=/home/pi/startup.sh
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target
