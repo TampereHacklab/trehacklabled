@@ -1,10 +1,10 @@
 [Unit]
-Description=User ledmatrix script
+Description=TreHacklab LedMatrix
 After=multi-user.target
 
 [Service]
 Type=simple
-ExecStart=~/startup.sh
+ExecStart=/home/pi/startup.sh
 
 [Install]
 WantedBy=multi-user.target
