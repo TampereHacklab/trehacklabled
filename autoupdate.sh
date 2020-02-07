@@ -11,9 +11,10 @@ do
 	REMOTE=$(git rev-parse @{u});
 
 	if [ $LOCAL != $REMOTE ]; then
-		git pull origin master
-		sudo systemctl stop ledmatrix.service
-		sudo systemctl start ledmatrix.service
+	        git pull origin master
+                pipenv sync
+		sudo systemctl --user stop ledmatrix.service
+		sudo systemctl --user start ledmatrix.service
 	fi
-sleep 60
+sleep 900
 done
