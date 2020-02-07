@@ -1,11 +1,6 @@
 #! /bin/bash
 
-# This should run when system boots
-# Starts user led display program
+#Stop: systemctl --user stop ledmatrix
+#Start: systemctl --user start ledmatrix
 
-#Systemd service called ledmatrix.service handles starting this,
-#Stop: sudo systemctl stop ledmatrix.service
-#Start: sudo systemctl start ledmatrix.service
-
-#NOT FULLY IMPLEMENTED YET!
-/usr/bin/python3 /home/trehacklab/git/trehacklabled/led.py
+/usr/bin/python3 ~/git/trehacklabled/led.py
