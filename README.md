@@ -37,7 +37,7 @@ systemctl --user daemon-reload
 systemctl --user enable ledmatrix
 systemctl --user enable autoupdate
 
-reboot
+sudo reboot
 ```
 
 autoupdate will check for new code in the repo every 15 minutes and restart the services if required
